@@ -10,7 +10,7 @@ namespace LookingForRepos.Model
     /// </summary>
     public class RepositoriesFromNet
     {
-        private const string MY_CONNECT_TOKEN = "ab22831e98c6145c5f952a05570dc7ed780c2c17";
+        private const string MY_CONNECT_TOKEN = "712521604b72a9296ea49bec471093b8abdb50bb";
 
         private readonly string m_SearchVal;
         public List<M_Repository> RepositoriesList { get; } = new List<M_Repository>();
