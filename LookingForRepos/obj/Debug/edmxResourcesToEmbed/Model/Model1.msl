@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище githubdbModelContainer" CdmEntityContainer="githubdbEntities">
+    <EntitySetMapping Name="T_AUTHORS">
+      <EntityTypeMapping TypeName="githubdbModel.T_AUTHORS">
+        <MappingFragment StoreEntitySet="T_AUTHORS">
+          <ScalarProperty Name="ID_AUTHOR" ColumnName="ID_AUTHOR" />
+          <ScalarProperty Name="LOGIN" ColumnName="LOGIN" />
+          <ScalarProperty Name="AVATAR" ColumnName="AVATAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_REPO">
+      <EntityTypeMapping TypeName="githubdbModel.T_REPO">
+        <MappingFragment StoreEntitySet="T_REPO">
+          <ScalarProperty Name="ID_REPO" ColumnName="ID_REPO" />
+          <ScalarProperty Name="REPO_NAME" ColumnName="REPO_NAME" />
+          <ScalarProperty Name="REPO_DESC" ColumnName="REPO_DESC" />
+          <ScalarProperty Name="AUTHOR_ID" ColumnName="AUTHOR_ID" />
+          <ScalarProperty Name="REPO_REF" ColumnName="REPO_REF" />
+          <ScalarProperty Name="LANGUAGE" ColumnName="LANGUAGE" />
+          <ScalarProperty Name="STARS_COUNT" ColumnName="STARS_COUNT" />
+          <ScalarProperty Name="FORKS_COUNT" ColumnName="FORKS_COUNT" />
+          <ScalarProperty Name="DATE_UPDATE" ColumnName="DATE_UPDATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

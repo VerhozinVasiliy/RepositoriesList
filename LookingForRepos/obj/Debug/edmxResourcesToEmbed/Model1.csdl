@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="githubdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="T_AUTHORS">
+    <Key>
+      <PropertyRef Name="ID_AUTHOR" />
+    </Key>
+    <Property Name="ID_AUTHOR" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LOGIN" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AVATAR" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="T_REPO" Relationship="githubdbModel.T_AUTHORST_REPO" FromRole="T_AUTHORS" ToRole="T_REPO" />
+  </EntityType>
+  <EntityType Name="T_REPO">
+    <Key>
+      <PropertyRef Name="ID_REPO" />
+    </Key>
+    <Property Name="ID_REPO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="REPO_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="REPO_DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AUTHOR_ID" Type="Int32" Nullable="false" />
+    <Property Name="REPO_REF" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LANGUAGE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STARS_COUNT" Type="Int32" Nullable="false" />
+    <Property Name="FORKS_COUNT" Type="Int32" Nullable="false" />
+    <Property Name="DATE_UPDATE" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="T_AUTHORS" Relationship="githubdbModel.T_AUTHORST_REPO" FromRole="T_REPO" ToRole="T_AUTHORS" />
+  </EntityType>
+  <EntityContainer Name="githubdbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="T_AUTHORS" EntityType="Self.T_AUTHORS" />
+    <EntitySet Name="T_REPO" EntityType="Self.T_REPO" />
+    <AssociationSet Name="T_AUTHORST_REPO" Association="githubdbModel.T_AUTHORST_REPO">
+      <End Role="T_AUTHORS" EntitySet="T_AUTHORS" />
+      <End Role="T_REPO" EntitySet="T_REPO" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="T_AUTHORST_REPO">
+    <End Type="githubdbModel.T_AUTHORS" Role="T_AUTHORS" Multiplicity="1" />
+    <End Type="githubdbModel.T_REPO" Role="T_REPO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_AUTHORS">
+        <PropertyRef Name="ID_AUTHOR" />
+      </Principal>
+      <Dependent Role="T_REPO">
+        <PropertyRef Name="AUTHOR_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

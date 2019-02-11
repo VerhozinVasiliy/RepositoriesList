@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище githubdbModel" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="T_AUTHORS">
+    <Key>
+      <PropertyRef Name="ID_AUTHOR" />
+    </Key>
+    <Property Name="ID_AUTHOR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LOGIN" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="AVATAR" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_REPO">
+    <Key>
+      <PropertyRef Name="ID_REPO" />
+    </Key>
+    <Property Name="ID_REPO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="REPO_NAME" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="REPO_DESC" Type="varchar(max)" Nullable="false" />
+    <Property Name="AUTHOR_ID" Type="int" Nullable="false" />
+    <Property Name="REPO_REF" Type="varchar(max)" Nullable="false" />
+    <Property Name="LANGUAGE" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="STARS_COUNT" Type="int" Nullable="false" />
+    <Property Name="FORKS_COUNT" Type="int" Nullable="false" />
+    <Property Name="DATE_UPDATE" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Хранилище githubdbModelContainer">
+    <EntitySet Name="T_AUTHORS" EntityType="Self.T_AUTHORS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_REPO" EntityType="Self.T_REPO" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

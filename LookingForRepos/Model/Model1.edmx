@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище githubdbModel" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="T_AUTHORS">
+          <Key>
+            <PropertyRef Name="ID_AUTHOR" />
+          </Key>
+          <Property Name="ID_AUTHOR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LOGIN" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="AVATAR" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_REPO">
+          <Key>
+            <PropertyRef Name="ID_REPO" />
+          </Key>
+          <Property Name="ID_REPO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="REPO_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="REPO_DESC" Type="nvarchar(max)" />
+          <Property Name="AUTHOR_ID" Type="int" Nullable="false" />
+          <Property Name="REPO_REF" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="LANGUAGE" Type="nvarchar" MaxLength="30" />
+          <Property Name="STARS_COUNT" Type="int" Nullable="false" />
+          <Property Name="FORKS_COUNT" Type="int" Nullable="false" />
+          <Property Name="DATE_UPDATE" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Хранилище githubdbModelContainer">
+          <EntitySet Name="T_AUTHORS" EntityType="Self.T_AUTHORS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_REPO" EntityType="Self.T_REPO" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="githubdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="T_AUTHORS">
+          <Key>
+            <PropertyRef Name="ID_AUTHOR" />
+          </Key>
+          <Property Name="ID_AUTHOR" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LOGIN" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AVATAR" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="T_REPO" Relationship="githubdbModel.T_AUTHORST_REPO" FromRole="T_AUTHORS" ToRole="T_REPO" />
+        </EntityType>
+        <EntityType Name="T_REPO">
+          <Key>
+            <PropertyRef Name="ID_REPO" />
+          </Key>
+          <Property Name="ID_REPO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="REPO_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="REPO_DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AUTHOR_ID" Type="Int32" Nullable="false" />
+          <Property Name="REPO_REF" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LANGUAGE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="STARS_COUNT" Type="Int32" Nullable="false" />
+          <Property Name="FORKS_COUNT" Type="Int32" Nullable="false" />
+          <Property Name="DATE_UPDATE" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="T_AUTHORS" Relationship="githubdbModel.T_AUTHORST_REPO" FromRole="T_REPO" ToRole="T_AUTHORS" />
+        </EntityType>
+        <EntityContainer Name="githubdbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="T_AUTHORS" EntityType="Self.T_AUTHORS" />
+          <EntitySet Name="T_REPO" EntityType="Self.T_REPO" />
+          <AssociationSet Name="T_AUTHORST_REPO" Association="githubdbModel.T_AUTHORST_REPO">
+            <End Role="T_AUTHORS" EntitySet="T_AUTHORS" />
+            <End Role="T_REPO" EntitySet="T_REPO" />
+          </AssociationSet>
+        </EntityContainer>
+        <Association Name="T_AUTHORST_REPO">
+          <End Type="githubdbModel.T_AUTHORS" Role="T_AUTHORS" Multiplicity="1" />
+          <End Type="githubdbModel.T_REPO" Role="T_REPO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_AUTHORS">
+              <PropertyRef Name="ID_AUTHOR" />
+            </Principal>
+            <Dependent Role="T_REPO">
+              <PropertyRef Name="AUTHOR_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище githubdbModelContainer" CdmEntityContainer="githubdbEntities">
+          <EntitySetMapping Name="T_AUTHORS">
+            <EntityTypeMapping TypeName="githubdbModel.T_AUTHORS">
+              <MappingFragment StoreEntitySet="T_AUTHORS">
+                <ScalarProperty Name="ID_AUTHOR" ColumnName="ID_AUTHOR" />
+                <ScalarProperty Name="LOGIN" ColumnName="LOGIN" />
+                <ScalarProperty Name="AVATAR" ColumnName="AVATAR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_REPO">
+            <EntityTypeMapping TypeName="githubdbModel.T_REPO">
+              <MappingFragment StoreEntitySet="T_REPO">
+                <ScalarProperty Name="ID_REPO" ColumnName="ID_REPO" />
+                <ScalarProperty Name="REPO_NAME" ColumnName="REPO_NAME" />
+                <ScalarProperty Name="REPO_DESC" ColumnName="REPO_DESC" />
+                <ScalarProperty Name="AUTHOR_ID" ColumnName="AUTHOR_ID" />
+                <ScalarProperty Name="REPO_REF" ColumnName="REPO_REF" />
+                <ScalarProperty Name="LANGUAGE" ColumnName="LANGUAGE" />
+                <ScalarProperty Name="STARS_COUNT" ColumnName="STARS_COUNT" />
+                <ScalarProperty Name="FORKS_COUNT" ColumnName="FORKS_COUNT" />
+                <ScalarProperty Name="DATE_UPDATE" ColumnName="DATE_UPDATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
