@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using Octokit;
 
@@ -10,7 +11,7 @@ namespace LookingForRepos.Model
     /// </summary>
     public class RepositoriesFromNet
     {
-        private const string MY_CONNECT_TOKEN = "26da4f109050a2389f48cbe0f9bfe4143c97ea63";
+        //private const string MY_CONNECT_TOKEN = "26da4f109050a2389f48cbe0f9bfe4143c97ea63";
 
         private readonly string m_SearchVal;
         public List<M_Repository> RepositoriesList { get; } = new List<M_Repository>();
@@ -30,7 +31,8 @@ namespace LookingForRepos.Model
             #region TrueGetFromNet
 
             var client = new GitHubClient(new ProductHeaderValue(AppDomain.CurrentDomain.FriendlyName));
-            var basicAuth = new Credentials(MY_CONNECT_TOKEN);
+            var token = ConfigurationManager.AppSettings.Get("Token");
+            var basicAuth = new Credentials(token);
             client.Credentials = basicAuth;
 
             var request = new SearchRepositoriesRequest(m_SearchVal)
