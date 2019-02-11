@@ -134,6 +134,10 @@ namespace LookingForRepos.ViewModel
             {
                 err = "Проблема доступа к сайту. Проверьте соединение с интернет";
             }
+            catch (AggregateException)
+            {
+                err = "Проблема доступа к сайту. Проверьте токен подключения к сайту гитхабы в файле app.config";
+            }
             finally
             {
                 SetMainList(loadReps.RepositoriesList);
