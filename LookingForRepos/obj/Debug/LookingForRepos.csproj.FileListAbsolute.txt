@@ -1,30 +1,17 @@
 d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\bin\Debug\LookingForRepos.exe.config
 d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\bin\Debug\LookingForRepos.exe
 d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\bin\Debug\LookingForRepos.pdb
-d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\App.g.cs
-d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos_MarkupCompile.cache
-d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos.g.resources
-d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos.Properties.Resources.resources
-d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos.csproj.GenerateResource.cache
-d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos.csproj.CoreCompileInputs.cache
-d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos.exe
-d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos.pdb
-d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\View\MainWindow.g.cs
-d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\View\MainWindow.baml
-d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\GeneratedInternalTypeHelper.g.cs
-d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos_MarkupCompile.lref
 d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\bin\Debug\EntityFramework.dll
 d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\bin\Debug\EntityFramework.SqlServer.dll
+d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\bin\Debug\Microsoft.Practices.Prism.dll
+d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\bin\Debug\Octokit.dll
+d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\bin\Debug\System.Windows.Interactivity.dll
 d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\bin\Debug\EntityFramework.xml
 d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\bin\Debug\EntityFramework.SqlServer.xml
+d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\bin\Debug\Octokit.xml
+d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\bin\Debug\System.Windows.Interactivity.xml
 d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\bin\Debug\ru\EntityFramework.resources.dll
 d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
-d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos_Content.g.cs
-d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos.csproj.CopyComplete
-d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\bin\Debug\Microsoft.Practices.Prism.dll
-d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos.csprojResolveAssemblyReference.cache
-d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\bin\Debug\System.Windows.Interactivity.dll
-d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\bin\Debug\System.Windows.Interactivity.xml
 d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\bin\Debug\de\System.Windows.Interactivity.resources.dll
 d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\bin\Debug\en\System.Windows.Interactivity.resources.dll
 d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\bin\Debug\es\System.Windows.Interactivity.resources.dll
@@ -34,79 +21,18 @@ d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\Look
 d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\bin\Debug\ko\System.Windows.Interactivity.resources.dll
 d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
 d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
-D:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\bin\Debug\Octokit.dll
-D:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\bin\Debug\Octokit.xml
-E:\projects\LookingForRepos\LookingForRepos\bin\Debug\LookingForRepos.exe.config
-E:\projects\LookingForRepos\LookingForRepos\bin\Debug\LookingForRepos.exe
-E:\projects\LookingForRepos\LookingForRepos\bin\Debug\LookingForRepos.pdb
-E:\projects\LookingForRepos\LookingForRepos\bin\Debug\EntityFramework.dll
-E:\projects\LookingForRepos\LookingForRepos\bin\Debug\EntityFramework.SqlServer.dll
-E:\projects\LookingForRepos\LookingForRepos\bin\Debug\Microsoft.Practices.Prism.dll
-E:\projects\LookingForRepos\LookingForRepos\bin\Debug\Octokit.dll
-E:\projects\LookingForRepos\LookingForRepos\bin\Debug\EntityFramework.xml
-E:\projects\LookingForRepos\LookingForRepos\bin\Debug\EntityFramework.SqlServer.xml
-E:\projects\LookingForRepos\LookingForRepos\bin\Debug\Octokit.xml
-E:\projects\LookingForRepos\LookingForRepos\bin\Debug\System.Windows.Interactivity.xml
-E:\projects\LookingForRepos\LookingForRepos\bin\Debug\ru\EntityFramework.resources.dll
-E:\projects\LookingForRepos\LookingForRepos\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
-E:\projects\LookingForRepos\LookingForRepos\bin\Debug\de\System.Windows.Interactivity.resources.dll
-E:\projects\LookingForRepos\LookingForRepos\bin\Debug\en\System.Windows.Interactivity.resources.dll
-E:\projects\LookingForRepos\LookingForRepos\bin\Debug\es\System.Windows.Interactivity.resources.dll
-E:\projects\LookingForRepos\LookingForRepos\bin\Debug\fr\System.Windows.Interactivity.resources.dll
-E:\projects\LookingForRepos\LookingForRepos\bin\Debug\it\System.Windows.Interactivity.resources.dll
-E:\projects\LookingForRepos\LookingForRepos\bin\Debug\ja\System.Windows.Interactivity.resources.dll
-E:\projects\LookingForRepos\LookingForRepos\bin\Debug\ko\System.Windows.Interactivity.resources.dll
-E:\projects\LookingForRepos\LookingForRepos\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
-E:\projects\LookingForRepos\LookingForRepos\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
-E:\projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos.csprojAssemblyReference.cache
-E:\projects\LookingForRepos\LookingForRepos\obj\Debug\View\MainWindow.g.cs
-E:\projects\LookingForRepos\LookingForRepos\obj\Debug\App.g.cs
-E:\projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos_Content.g.cs
-E:\projects\LookingForRepos\LookingForRepos\obj\Debug\GeneratedInternalTypeHelper.g.cs
-E:\projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos_MarkupCompile.cache
-E:\projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos_MarkupCompile.lref
-E:\projects\LookingForRepos\LookingForRepos\obj\Debug\View\MainWindow.baml
-E:\projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos.g.resources
-E:\projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos.Properties.Resources.resources
-E:\projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos.csproj.GenerateResource.cache
-E:\projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos.csproj.CoreCompileInputs.cache
-E:\projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos.csproj.CopyComplete
-E:\projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos.exe
-E:\projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos.pdb
-E:\projects\GitHub\RepositoriesList\LookingForRepos\bin\Debug\LookingForRepos.exe.config
-E:\projects\GitHub\RepositoriesList\LookingForRepos\bin\Debug\LookingForRepos.exe
-E:\projects\GitHub\RepositoriesList\LookingForRepos\bin\Debug\LookingForRepos.pdb
-E:\projects\GitHub\RepositoriesList\LookingForRepos\bin\Debug\EntityFramework.dll
-E:\projects\GitHub\RepositoriesList\LookingForRepos\bin\Debug\EntityFramework.SqlServer.dll
-E:\projects\GitHub\RepositoriesList\LookingForRepos\bin\Debug\Microsoft.Practices.Prism.dll
-E:\projects\GitHub\RepositoriesList\LookingForRepos\bin\Debug\Octokit.dll
-E:\projects\GitHub\RepositoriesList\LookingForRepos\bin\Debug\EntityFramework.xml
-E:\projects\GitHub\RepositoriesList\LookingForRepos\bin\Debug\EntityFramework.SqlServer.xml
-E:\projects\GitHub\RepositoriesList\LookingForRepos\bin\Debug\Octokit.xml
-E:\projects\GitHub\RepositoriesList\LookingForRepos\bin\Debug\System.Windows.Interactivity.xml
-E:\projects\GitHub\RepositoriesList\LookingForRepos\bin\Debug\ru\EntityFramework.resources.dll
-E:\projects\GitHub\RepositoriesList\LookingForRepos\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
-E:\projects\GitHub\RepositoriesList\LookingForRepos\bin\Debug\de\System.Windows.Interactivity.resources.dll
-E:\projects\GitHub\RepositoriesList\LookingForRepos\bin\Debug\en\System.Windows.Interactivity.resources.dll
-E:\projects\GitHub\RepositoriesList\LookingForRepos\bin\Debug\es\System.Windows.Interactivity.resources.dll
-E:\projects\GitHub\RepositoriesList\LookingForRepos\bin\Debug\fr\System.Windows.Interactivity.resources.dll
-E:\projects\GitHub\RepositoriesList\LookingForRepos\bin\Debug\it\System.Windows.Interactivity.resources.dll
-E:\projects\GitHub\RepositoriesList\LookingForRepos\bin\Debug\ja\System.Windows.Interactivity.resources.dll
-E:\projects\GitHub\RepositoriesList\LookingForRepos\bin\Debug\ko\System.Windows.Interactivity.resources.dll
-E:\projects\GitHub\RepositoriesList\LookingForRepos\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
-E:\projects\GitHub\RepositoriesList\LookingForRepos\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
-E:\projects\GitHub\RepositoriesList\LookingForRepos\obj\Debug\LookingForRepos.csprojAssemblyReference.cache
-E:\projects\GitHub\RepositoriesList\LookingForRepos\obj\Debug\View\MainWindow.g.cs
-E:\projects\GitHub\RepositoriesList\LookingForRepos\obj\Debug\App.g.cs
-E:\projects\GitHub\RepositoriesList\LookingForRepos\obj\Debug\LookingForRepos_Content.g.cs
-E:\projects\GitHub\RepositoriesList\LookingForRepos\obj\Debug\GeneratedInternalTypeHelper.g.cs
-E:\projects\GitHub\RepositoriesList\LookingForRepos\obj\Debug\LookingForRepos_MarkupCompile.cache
-E:\projects\GitHub\RepositoriesList\LookingForRepos\obj\Debug\LookingForRepos_MarkupCompile.lref
-E:\projects\GitHub\RepositoriesList\LookingForRepos\obj\Debug\View\MainWindow.baml
-E:\projects\GitHub\RepositoriesList\LookingForRepos\obj\Debug\LookingForRepos.g.resources
-E:\projects\GitHub\RepositoriesList\LookingForRepos\obj\Debug\LookingForRepos.Properties.Resources.resources
-E:\projects\GitHub\RepositoriesList\LookingForRepos\obj\Debug\LookingForRepos.csproj.GenerateResource.cache
-E:\projects\GitHub\RepositoriesList\LookingForRepos\obj\Debug\LookingForRepos.csproj.CoreCompileInputs.cache
-E:\projects\GitHub\RepositoriesList\LookingForRepos\obj\Debug\LookingForRepos.csproj.CopyComplete
-E:\projects\GitHub\RepositoriesList\LookingForRepos\obj\Debug\LookingForRepos.exe
-E:\projects\GitHub\RepositoriesList\LookingForRepos\obj\Debug\LookingForRepos.pdb
+d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos.csprojResolveAssemblyReference.cache
+d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\View\MainWindow.g.cs
+d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\App.g.cs
+d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos_Content.g.cs
+d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\GeneratedInternalTypeHelper.g.cs
+d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos_MarkupCompile.cache
+d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos_MarkupCompile.lref
+d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\View\MainWindow.baml
+d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos.g.resources
+d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos.Properties.Resources.resources
+d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos.csproj.GenerateResource.cache
+d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos.csproj.CoreCompileInputs.cache
+d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos.csproj.CopyComplete
+d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos.exe
+d:\Users\verkhozin_va\Documents\Visual Studio 2017\Projects\LookingForRepos\LookingForRepos\obj\Debug\LookingForRepos.pdb

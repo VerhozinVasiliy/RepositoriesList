@@ -11,8 +11,6 @@ namespace LookingForRepos.Model
     /// </summary>
     public class RepositoriesFromNet
     {
-        //private const string MY_CONNECT_TOKEN = "26da4f109050a2389f48cbe0f9bfe4143c97ea63";
-
         private readonly string m_SearchVal;
         public List<M_Repository> RepositoriesList { get; } = new List<M_Repository>();
 
@@ -60,9 +58,7 @@ namespace LookingForRepos.Model
             }
 
             #endregion
-
-
-
+            
             #region Test Load
 
             //var avaList = new List<string>

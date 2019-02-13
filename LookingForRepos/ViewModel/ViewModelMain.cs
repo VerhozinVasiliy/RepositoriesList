@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
+using System.Configuration;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Data;
 using System.Windows.Input;
 using LookingForRepos.Model;
 
@@ -21,9 +21,6 @@ namespace LookingForRepos.ViewModel
             ProgressorVisible = Visibility.Hidden;
             IsButtonEnables = true;
         }
-
-        public delegate void ExitDelegate();
-        public event ExitDelegate M_ExitEvent;
 
         #region Props
 
@@ -149,6 +146,54 @@ namespace LookingForRepos.ViewModel
                     MessageBox.Show(err, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
+
+            if (!loadReps.RepositoriesList.Any())
+            {
+                return;
+            }
+
+            // сохраним последний вариант поиска
+            try
+            {
+                var configFile = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                var settings = configFile.AppSettings.Settings;
+                if (settings["SearchingVal"] != null)
+                {
+                    settings.Remove("SearchingVal");
+                }
+                settings.Add("SearchingVal", TextToFind);
+                configFile.Save(ConfigurationSaveMode.Modified);
+                ConfigurationManager.RefreshSection(configFile.AppSettings.SectionInformation.Name);
+            }
+            catch (ConfigurationErrorsException)
+            {
+                MessageBox.Show("Не записать в конфигурационный файл", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            } 
+            
+            //сохраним в БД
+            IsButtonEnables = false;
+            ProgressorLabel = "Сохраняю репозитории в БД...";
+            ProgressorVisible = Visibility.Visible;
+
+            var saverepo = new RepoToBase(MainRepoList);
+            try
+            {
+                await Task.Factory.StartNew(() => saverepo.Save());
+            }
+            catch (System.Data.Entity.Core.EntityException)
+            {
+                err = "Не могу сохранить данные в БД. Ошибка в строке подключения к БД. Внимательно проверьте данные в файле app.config";
+            }
+            finally
+            {
+                IsButtonEnables = true;
+                ProgressorLabel = "";
+                ProgressorVisible = Visibility.Hidden;
+                if (!string.IsNullOrEmpty(err))
+                {
+                    MessageBox.Show(err, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
         }
         private void SetMainList(List<M_Repository> inList)
         {
@@ -158,48 +203,27 @@ namespace LookingForRepos.ViewModel
 
 
         /// <summary>
-        /// закрытие окна
-        /// </summary>
-        private bool m_DoClose;
-        public async void OnWindowClosing(object sender, CancelEventArgs e)
-        {
-            IsButtonEnables = false;
-            ProgressorLabel = "Сохраняю в БД...";
-            ProgressorVisible = Visibility.Visible;
-            // сохраним значения в БД
-            e.Cancel = !m_DoClose;
-            if (!m_DoClose)
-            {
-                await SavingDBOnClose();
-            }
-            
-        }
-        private async Task SavingDBOnClose()
-        {
-            var saverepo = new RepoToBase(MainRepoList);
-            try
-            {
-                await Task.Factory.StartNew(() => saverepo.Save());
-            }
-            catch (System.Data.Entity.Core.EntityException)
-            {
-                MessageBox.Show("Ошибка в строке подключения. Внимательно проверьте данные в файле app.config",
-                    "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-            finally
-            {
-                m_DoClose = true;
-                M_ExitEvent?.Invoke();
-            }
-        }
-
-        /// <summary>
         /// окно загружено - подгрузим даданные последнего поиска из БД
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="eventArgs"></param>
         public async void OnContentRendered(object sender, EventArgs eventArgs)
         {
+            // читаем данные о строке поиска из файла конфигурации
+            try
+            {
+                var configFile = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                var settings = configFile.AppSettings.Settings;
+                if (settings["SearchingVal"] != null)
+                {
+                    TextToFind = settings["SearchingVal"].Value;
+                }
+            }
+            catch (ConfigurationErrorsException)
+            {
+                MessageBox.Show("Не могу прочитать конфигурационный файл", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
             IsButtonEnables = false;
             ProgressorLabel = "Читаю данные последнего поиска из БД...";
             ProgressorVisible = Visibility.Visible;

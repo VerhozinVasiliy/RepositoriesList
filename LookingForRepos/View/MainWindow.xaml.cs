@@ -14,14 +14,7 @@ namespace LookingForRepos.View
             InitializeComponent();
             var viewModel = new ViewModel.ViewModelMain();
             DataContext = viewModel;
-            Closing += viewModel.OnWindowClosing;
-            viewModel.M_ExitEvent += ViewModelOnMExitEvent;
             ContentRendered += viewModel.OnContentRendered;
-        }
-
-        private void ViewModelOnMExitEvent()
-        {
-            Close();
         }
 
         private void OnHyperlinkClick(object sender, RoutedEventArgs e)
